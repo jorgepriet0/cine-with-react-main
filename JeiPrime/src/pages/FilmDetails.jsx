@@ -6,7 +6,7 @@ function FilmDetails() {
   const [pelicula, setPelicula] = useState([]);
   const [aparecer, setAparecer] = useState(false);
   const [valoracion, setValoracion] = useState();
-  const [enFavoritos, setEnFavoritos] = useState(false); // Variable de estado para indicar si la película está en favoritos
+  const [enFavoritos, setEnFavoritos] = useState(false);
   const parametros = useParams();
   const id = parametros.id;
   let val;
@@ -14,7 +14,6 @@ function FilmDetails() {
   const imagen = "https://image.tmdb.org/t/p/original/";
 
   const addFavoritos = () => {
-    // Lógica para añadir/quitar la película de favoritos
     if (enFavoritos) {
       // Si ya está en favoritos, la eliminamos
       let arrayLocal = localStorage.getItem('peliculas');

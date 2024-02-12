@@ -6,6 +6,8 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
+import { Provider } from 'react-redux';
+import store from './app/store';
 //componentes
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -56,6 +58,8 @@ const rutas = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={rutas} />
+    <Provider store={store}>
+      <RouterProvider router={rutas} />
+    </Provider>
   </React.StrictMode>,
 )
